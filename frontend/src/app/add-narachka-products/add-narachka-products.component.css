@@ -1,0 +1,13 @@
+.category {
+  display:inline-block;
+  width:10em;
+  height:6em;
+  background-color:green;
+  cursor:grab;
+}
+.category:hover {
+  background-color: red;
+}
+h3:hover {
+  cursor: grab;
+}

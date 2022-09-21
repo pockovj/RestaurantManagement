@@ -1,0 +1,27 @@
+<div *ngIf="table" class="container">
+  <button type="button" class="btn btn-danger btn-lg mt-4 me-4" routerLink=''>Назад</button>
+  <div>
+    <button type="button" class="btn btn-outline-light btn-lg mt-4" routerLink='/tables/{{table.id}}/categories'>Додади
+      нова нарачка
+    </button>
+    <button type="button" class="btn btn-outline-light btn-lg mt-4 mx-4" (click)="fiskalna()">Фискална сметка</button>
+  </div>
+  <h3 class="text-info text-center">Маса број {{table.id}}</h3>
+  <h3 class="text-decoration-underline text-info fw-bolder text-end">Вкупно: {{table.totalPrice}}ден.</h3>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <th class="text-white fw-bold">Продукт</th>
+      <th class="text-white fw-bold">Количина</th>
+      <th class="text-white fw-bold">Вкупно</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let produktKolichina of produktKolichinas">
+      <td class="text-white fw-bold bg-dark">{{produktKolichina.produkt.ime}}</td>
+      <td class="text-white fw-bold bg-dark">{{produktKolichina.kolichina}}</td>
+      <td class="text-white fw-bold bg-dark">{{produktKolichina.kolichina * produktKolichina.produkt.cena}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

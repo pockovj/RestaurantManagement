@@ -1,0 +1,11 @@
+<div class="body">
+  <div class="container">
+    <button type="button" class="btn btn-outline-danger btn-lg m-4" (click)="izveshtaj()">Дневен извештај</button>
+    <div class="tables pt-4">
+      <span class="masa m-3 rounded-4" *ngFor="let table of tables" [ngClass]="table.narachki.length > 0?'zafatena':''" routerLink='/tables/{{table.id}}'>
+          <h1 class="text-white text-center mt-3 fw-bolder">{{table.ime}}</h1>
+      </span>
+    </div>
+  </div>
+</div>
+

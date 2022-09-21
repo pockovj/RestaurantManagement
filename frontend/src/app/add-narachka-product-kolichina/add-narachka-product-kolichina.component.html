@@ -1,0 +1,15 @@
+<div class="container" *ngIf="product && table && category">
+  <button type="button" class="btn btn-danger btn-lg mt-4 me-4"
+          routerLink='/tables/{{table.id}}/categories/{{category.id}}'>Назад
+  </button>
+  <div class="bg-dark w-50 text-center mx-auto mt-4">
+    <h3 class="text-white fw-bold pt-4 mb-2">Продукт: {{product.ime}}</h3>
+    <h3 class="text-white fw-bold mb-2">Цена: {{product.cena}}ден.</h3>
+    <h3 class="text-white fw-bold mb-2">Останато на залиха: {{product.stock}}</h3>
+    <div class="mb-3">
+      <input type="number" [(ngModel)]="kolichina">
+    </div>
+    <button type="button" class="btn btn-outline-success mx-5 mb-3" (click)="save()">Додади</button>
+    <button type="button" class="btn btn-outline-danger mx-5 mb-3" routerLink=''>Откажи</button>
+  </div>
+</div>

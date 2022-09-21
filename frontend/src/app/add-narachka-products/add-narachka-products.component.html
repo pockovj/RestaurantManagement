@@ -1,0 +1,8 @@
+<div class="container">
+  <button type="button" class="btn btn-danger btn-lg mt-4 me-4" routerLink=''>Назад</button>
+  <div class="categories" *ngIf="category && table">
+      <span class="category m-3" *ngFor="let product of category.produkti" routerLink="/tables/{{table.id}}/categories/{{category.id}}/{{product.id}}">
+        <h3 class="text-white text-center mt-4">{{product.ime}}</h3>
+      </span>
+  </div>
+</div>

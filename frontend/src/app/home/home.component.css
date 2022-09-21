@@ -1,0 +1,16 @@
+.masa {
+  display:inline-block;
+  width:5em;
+  height:5em;
+  background-color:green;
+}
+.masa:hover {
+  background-color: red;
+  cursor: grab;
+}
+.zafatena {
+  background-color:#330066;
+}
+h1:hover {
+  cursor: grab;
+}
